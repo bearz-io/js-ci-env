@@ -1,0 +1,20 @@
+{
+    "name": "@bearz/ci-env",
+    "version": "0.1.0",
+    "description": "The ci-env module implements it's own `@bearz/ansi/writer` to enable logging commands for Azure DevOps and Github. ",
+    "keywords": [
+        "bearz",
+        "ci",
+        "env",
+        "azure",
+        "devops",
+        "github",
+        "variables"
+    ],
+    "exports": {
+        ".": "./mod.ts",
+        "./driver": "./driver.ts",
+        "./writer": "./writer.ts",
+        "./vars": "./vars.ts"
+    }
+}
