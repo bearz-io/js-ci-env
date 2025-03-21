@@ -13,6 +13,7 @@
       },
       "devDependencies": {
         "@bearz/assert": "^0.1.0",
+        "@bearz/runtime-info": "^0.1.0",
         "@bearz/testing": "^0.0.0",
         "@types/node": "^22.13.10",
         "picocolors": "^1.0.0",
@@ -37,6 +38,8 @@
     "@bearz/path": ["@bearz/path@0.0.0", "", { "dependencies": { "@bearz/chars": "^0.1.0" } }, "sha512-dDxIet/12AqMEMqNUkJKoTv/0VTsMiM1oG7uFoO+dtoFV8DZzMDGzvTCpKKcV84IB1NmHmMsOAuCCt9eYLufLw=="],
 
     "@bearz/process": ["@bearz/process@0.1.0", "", {}, "sha512-PFWY2xOcj0Z22s8dOQEWtRY+sYsBEuyBCHfKB5IGYosV3KDJEyQoCiKRsDQSoGdsHp83I8rUzvoev5BIuV+ukg=="],
+
+    "@bearz/runtime-info": ["@bearz/runtime-info@0.1.0", "", {}, "sha512-IBUT89hRug6EM5UDQTP7qDizXR9Zad8cndxywNiqVrIxDRyV3CQKw3/GeYimi+GdJFLmk+hTxYh2p2mL4b2kDw=="],
 
     "@bearz/secrets": ["@bearz/secrets@0.1.0", "", { "dependencies": { "@bearz/chars": "^0.1.0" } }, "sha512-goNgjgIn1f3fFvTy2FRnhYXopc4rT2zvCJrf3ElL8kK8DIM47UL2T2qwkBnLgsEupO7F6am+590BeFIir8Rc+Q=="],
 

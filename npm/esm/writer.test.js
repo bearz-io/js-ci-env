@@ -3,6 +3,7 @@ import { DefaultPipelineWriter, handleArguments } from "./writer.js";
 import { equal, instanceOf, ok } from "@bearz/assert";
 import { AnsiLogLevels } from "@bearz/ansi";
 import { CI_DRIVER } from "./driver.js";
+import { EOL } from "@bearz/runtime-info/os";
 test("handleArguments with no args returns undefined msg and stack", () => {
     function test() {
         return handleArguments(arguments);
@@ -32,9 +33,9 @@ test("DefaultPipelineWriter debug output format", () => {
     });
     writer.debug("test message");
     if (CI_DRIVER === "github") {
-        equal(output, "::debug::test message\n");
+        equal(output, `::debug::test message${EOL}`);
     } else if (CI_DRIVER === "azdo") {
-        equal(output, "##[debug]test message\n");
+        equal(output, `##[debug]test message${EOL}`);
     }
 });
 test("DefaultPipelineWriter error output format", () => {
@@ -44,9 +45,9 @@ test("DefaultPipelineWriter error output format", () => {
     });
     writer.error("test error");
     if (CI_DRIVER === "github") {
-        equal(output, "::error::test error\n");
+        equal(output, `::error::test error${EOL}`);
     } else if (CI_DRIVER === "azdo") {
-        equal(output, "##[error]test error\n");
+        equal(output, `##[error]test error${EOL}`);
     }
 });
 test("DefaultPipelineWriter warn output format", () => {
@@ -56,8 +57,8 @@ test("DefaultPipelineWriter warn output format", () => {
     });
     writer.warn("test warning");
     if (CI_DRIVER === "github") {
-        equal(output, "::warning::test warning\n");
+        equal(output, `::warning::test warning${EOL}`);
     } else if (CI_DRIVER === "azdo") {
-        equal(output, "##[warning]test warning\n");
+        equal(output, `##[warning]test warning${EOL}`);
     }
 });
